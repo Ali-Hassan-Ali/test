@@ -15,7 +15,7 @@ class ApartmentController extends Controller
         return response([
                 'message' => "ok",
                 'error'   => false,
-                'data'    => $apartments->forPage($page,20)->values(),
+                'data'    => $apartments,
                 'meta' => [
                     'total'     => $apartments->count(),
                     'last_page' => ceil($apartments->count()/20)
@@ -23,5 +23,5 @@ class ApartmentController extends Controller
             ],200);
 
     }//end of index
-    
+
 }//end of controller
