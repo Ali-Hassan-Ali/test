@@ -30,6 +30,7 @@ Route::post('/advanced_search',[SearchController::class,'advanced_search']);
 
 Route::post('/order/store',[OrderController::class,'store']);
 
+Route::get('/apartments',[ApartmentController::class,'index']);
 Route::post('/apartments/store',[ApartmentController::class,'store']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
